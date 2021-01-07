@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 pull-right">
+            <a href="#" class="btn btn-primary pull-right" routerLink="addUser">Add User</a><br/><br/>
+        </div>
+        <div class="table-responsive-sm">
+            
+            <table class="table table-responsive table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of users">
+                        <td>{{ p.id }}</td>
+                        <td>{{ p.name }}</td>
+                        <td>{{ p.email }}</td>
+                        <td><button class="btn btn-danger pull-right" (click)="deleteUser(p.id)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
